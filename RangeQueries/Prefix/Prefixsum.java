@@ -24,7 +24,7 @@ public class Prefixsum{
          int n = fs.nextInt();
         int q = fs.nextInt();
         long[] pref = new long[n + 1];
-        
+        //  sum(a,b) = prefix(b)-prefix(a-1)
         for(int i = 1 ; i <= n ;i++){
             pref[i] = pref[i-1]+fs.nextLong();
         }
