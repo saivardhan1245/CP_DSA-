@@ -3,6 +3,19 @@ package RangeQueries.Prefix;
 
 
 import java.io.*;
+/*
+Pattern: Prefix Sum (1D)
+Problem Type: Range Sum Queries
+Key Idea:
+- pref[i] stores sum of elements from 1 to i
+- Range sum (l, r) = pref[r] - pref[l - 1]
+
+Time Complexity:
+- Preprocessing: O(n)
+- Each query: O(1)
+
+Space Complexity: O(n)
+*/
 
 
 public class Prefixsum{
