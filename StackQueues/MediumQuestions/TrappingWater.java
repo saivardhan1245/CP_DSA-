@@ -1,5 +1,8 @@
 package StackQueues.MediumQuestions;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class TrappingWater {
     /*
     problem :
@@ -30,5 +33,28 @@ public class TrappingWater {
           totalWater+=currentWaterunits;
        }
        return totalWater;
+    }
+    /*  Using stack */
+    public int trap2(int[] height) {
+        int n = height.length;
+        Deque<Integer> st = new ArrayDeque<>();
+        int trap = 0 ;
+        for(int i = 0 ; i < n ; i++){
+            while(st.size()>0 && height[st.peek()]< height[i]){
+                int poppedidx = st.pop();
+                if(st.size()==0){
+                    break;
+                }
+                int ngr = i ;
+                int ngl = st.peek();
+                int maxWaterallowed = Math.min(height[ngr],height[ngl]);
+                int maxheight = maxWaterallowed - height[poppedidx];
+                int width = ngr-ngl-1;
+                trap += (maxheight*width);
+            }
+            st.push(i);
+
+        }
+        return trap;
     }
 }
