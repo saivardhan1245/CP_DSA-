@@ -15,7 +15,7 @@ public class TrappingWater {
 
     
      */
-    // T.c O(N), S.C:O(N)
+    // Using preprocessing of lmax,rmax arrays T.c O(N), S.C:O(N)
     public int trap(int[] height) {
        int n =  height.length;
        int[] lmax = new int[n];
@@ -34,7 +34,7 @@ public class TrappingWater {
        }
        return totalWater;
     }
-    /*  Using stack */
+    /*  Using stack T.C: O(N), S.C:O(N)*/
     public int trap2(int[] height) {
         int n = height.length;
         Deque<Integer> st = new ArrayDeque<>();
