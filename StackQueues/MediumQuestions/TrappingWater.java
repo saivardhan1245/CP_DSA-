@@ -57,4 +57,23 @@ public class TrappingWater {
         }
         return trap;
     }
+    // without extra space
+    public int trap3(int[] height) {
+       int n = height.length;
+       int l = 0 , r = n - 1 ;
+       int lmax = height[0] , rmax = height[n-1];
+       int totalWater = 0 ;
+       while(l<r){
+            if(lmax<=rmax){
+                totalWater +=  lmax - height[l];
+                l++;
+                lmax = Math.max(lmax,height[l]);
+            }else{
+                totalWater += rmax - height[r];
+                r--;
+                rmax = Math.max(rmax,height[r]);
+            }
+       }   
+       return totalWater;
+    }
 }
