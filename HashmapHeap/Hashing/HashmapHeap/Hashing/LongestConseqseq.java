@@ -1,6 +1,7 @@
+
+package HashmapHeap.Hashing;
 import java.util.HashSet;
 import java.util.Set;
-
 public class LongestConseqseq {
     //https://leetcode.com/problems/longest-consecutive-sequence/
    public int longestConsecutive(int[] nums) {

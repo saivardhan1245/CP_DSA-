@@ -1,4 +1,4 @@
-package Arrays.BasicQuestions;
+package HashmapHeap.Hashing;
 
 import java.util.HashMap;
 import java.util.Map;
