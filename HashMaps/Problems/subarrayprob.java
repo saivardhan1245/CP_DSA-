@@ -23,4 +23,22 @@ public class subarrayprob {
         }
         return maxLen;
     }
+    //https://www.geeksforgeeks.org/problems/zero-sum-subarrays1825/1
+    public int findSubarray(int[] arr) {
+        // code here.
+        HashMap<Integer,Integer> map = new HashMap<>();
+        int ans = 0 , csum = 0  ;
+        map.put(0,1);
+        for(int i = 0 ; i < arr.length ; i++){
+            csum += arr[i];
+            if(!map.containsKey(csum)){
+                map.put(csum, 1);
+            }else{
+                ans += map.get(csum);
+                map.put(csum,map.get(csum)+1);
+               
+            }
+        }
+        return ans;
+    }
 }
