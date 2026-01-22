@@ -2,7 +2,8 @@ package StackQueues.Basics;
 
 import java.util.Stack;
 
-public class DuplicateParthensis{
+public class DuplicateBrackets{
+     // https://www.geeksforgeeks.org/dsa/find-expression-duplicate-parenthesis-not/
     public static boolean checkDuplicate(String str){
         Stack<Integer> st = new Stack<>();
         for(char ch:str.toCharArray()){
@@ -22,7 +23,7 @@ public class DuplicateParthensis{
         return false;
     }
     public static void main(String[] args) {
-       // https://www.geeksforgeeks.org/dsa/find-expression-duplicate-parenthesis-not/
+      
     
     }
 }
