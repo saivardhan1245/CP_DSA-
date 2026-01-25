@@ -52,7 +52,48 @@ public class StockSpan {
  * StockSpanner obj = new StockSpanner();
  * int param_1 = obj.next(price);
  */
+
+
     public static void main(String[] args) {
-        
+        /*
+how to use stack of pairs
+
+
+class Pair {
+    int first;
+    int second;
+
+    Pair(int f, int s){
+        this.first = f;
+        this.second = s;
+    }
+}
+Stack<Pair> st = new Stack<>();
+
+st.push(new Pair(1, 10));
+st.push(new Pair(2, 20));
+
+Pair p = st.pop();
+System.out.println(p.first + " " + p.second);  // 2 20
+
+Deque<Pair> st = new ArrayDeque<>();
+
+st.push(new Pair(5, 100));
+st.push(new Pair(6, 200));
+
+Pair p = st.pop();
+System.out.println(p.first + " " + p.second);
+
+
+Stack<int[]> st = new Stack<>();
+
+st.push(new int[]{1, 10});
+st.push(new int[]{2, 20});
+
+int[] p = st.pop();
+System.out.println(p[0] + " " + p[1]);
+
+
+*/
     }
 }
