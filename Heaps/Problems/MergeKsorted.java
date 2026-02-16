@@ -1,4 +1,4 @@
-package HashmapHeap.Heaps;
+package Heaps.Problems;
 
 import java.util.PriorityQueue;
 //https://leetcode.com/problems/merge-k-sorted-lists/

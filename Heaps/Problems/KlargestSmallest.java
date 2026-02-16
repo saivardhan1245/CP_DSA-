@@ -1,4 +1,4 @@
-package HashmapHeap.Heaps;
+package Heaps.Problems;
 
 import java.util.Collections;
 import java.util.PriorityQueue;
@@ -17,6 +17,19 @@ public class KlargestSmallest {
         }
         return pq.peek();
         
+        
+         
+    }
+    public int findKthLargest2(int[] nums, int k) {
+        PriorityQueue<Integer> maxP = new PriorityQueue<>(Collections.reverseOrder());
+        for(int ele:nums){
+            maxP.add(ele);
+        }
+        while(k>1){
+            maxP.poll();
+            k--;
+        }
+        return maxP.peek();
         
     }
     //https://www.geeksforgeeks.org/problems/kth-smallest-element5635/1

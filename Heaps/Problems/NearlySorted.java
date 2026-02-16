@@ -1,4 +1,4 @@
-package HashmapHeap.Heaps;
+package Heaps.Problems;
 
 import java.util.PriorityQueue;
 //https://www.geeksforgeeks.org/problems/nearly-sorted-1587115620/1
