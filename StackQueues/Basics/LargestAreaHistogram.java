@@ -50,5 +50,11 @@ public class LargestAreaHistogram {
         }
         return maxArea;
     }
+    public int largestRectangleArea2(int[] heights) {
+        int n = heights.length;
+        Deque<Integer> st = new ArrayDeque<>();
+        int nsr = n , nsl = -1;
+        
+    }
 }
 
