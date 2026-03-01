@@ -1,5 +1,5 @@
 
-
+package StackQueues.Medium;
 import java.util.ArrayDeque;
 import java.util.Deque;
 

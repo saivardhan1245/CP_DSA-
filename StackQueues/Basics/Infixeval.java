@@ -1,7 +1,9 @@
 import java.util.*;
 public class Infixeval{
     public static  int precedence(char op){
-
+        if(op=='^'){
+            return 3;
+        }
         if(op=='/' || op=='*'){
             return 2 ;
         }else if(op=='+' || op =='-'){
@@ -17,7 +19,9 @@ public class Infixeval{
             return a-b;
         } else if(op=='*'){
             return a*b;
-        } 
+        } else if(op=='^'){
+            return (int)Math.pow(a, b);
+        }
         else 
         {
             return a/b;
@@ -35,8 +39,8 @@ public class Infixeval{
             else if(ch=='('){
                 operator.push(ch);
             }
-            else if(ch=='+' || ch=='-' || ch=='*' || ch =='/'){
-                while(operator.size()>0 && precedence(operator.peek())>=precedence(ch)){
+            else if(ch=='+' || ch=='-' || ch=='*' || ch =='/' ||ch=='^'){
+                while(operator.size()>0 && precedence(operator.peek())>precedence(ch) || (precedence(operator.peek())== precedence(ch)) && ch=='^'){
                     char op = operator.pop(); //m
                     int v2 = operand.pop();
                     int v1 = operand.pop();

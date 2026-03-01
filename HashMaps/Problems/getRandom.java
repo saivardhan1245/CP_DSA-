@@ -1,4 +1,8 @@
-public class getRandomo(1) {
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+public class getRandom {
     //https://leetcode.com/problems/insert-delete-getrandom-o1/
     class RandomizedSet {
     List<Integer> data;

@@ -1,4 +1,5 @@
-package Trees.GenericTrees.Construction;
+//package Trees.GenericTrees.Construction;
+
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -100,7 +101,7 @@ public class Main {
         }
     }
 }
-    public static void levelOrderwise(TreeNode root){
+    public static void levelOrderLinewise(TreeNode root){
         LinkedList<TreeNode> mainQ = new LinkedList<>();
         mainQ.addLast(root);
         LinkedList<TreeNode> childQ = new LinkedList<>();
@@ -124,7 +125,7 @@ public class Main {
         }
         
     }
-    public static void levelOrder3(TreeNode root){
+    public static void levelOrderLineWise2(TreeNode root){
         LinkedList<TreeNode> mainQ = new LinkedList<>();
         mainQ.addLast(root);
         mainQ.addLast(null);
@@ -149,7 +150,76 @@ public class Main {
             }
         }
     }
-   
+    public static void levelOrderLinewise3(TreeNode root){
+        LinkedList<TreeNode> que = new LinkedList<>();
+        que.add(root);
+        int level = 1 ;
+        while(!que.isEmpty()){
+            int currLevelNodes = que.size();
+            System.out.print("level"+level+" => ");
+            while (currLevelNodes-->0) {
+                TreeNode frontNode = que.removeFirst();
+                System.out.print(frontNode.data+",");
+                for(TreeNode child:frontNode.children){
+                    que.addLast(child);
+                }
+            }
+            level++;
+            System.out.println();
+
+        }
+    }
+
+
+
+
+    public static TreeNode makeMirror(TreeNode root){
+         TreeNode base = root;
+         for(TreeNode child:base.children){
+            int n = base.children.size();
+            int i = 0 , j = n - 1;
+            while(i<j){
+                TreeNode ithNode = base.children.get(i);
+                TreeNode jthNode = base.children.get(j);
+                base.children.set(i,jthNode);
+                base.children.set(j,ithNode);
+                i++;
+                j--;
+            }
+         }
+         return base;
+ }
+//  public static TreeNode linearsizeGT(TreeNode root){
+
+//  }
+public static boolean find(TreeNode root, int target){
+   TreeNode base = root;
+   if(root.data==target){
+    return true;
+   }
+   for(TreeNode child:base.children){
+
+   }
+    return true;
+        
+
+    }
+    public static ArrayList<TreeNode> nodeToRootPath(TreeNode root, int target){
+        ArrayList<TreeNode> ans = new ArrayList<>();
+        if(root.data==target){
+            ArrayList<TreeNode> res = new ArrayList<>();
+            res.add(root);
+            return res;
+        }
+        ans.add(root);
+        for(TreeNode child:root.children){
+            if(child.data!=target){
+                ans.add(child);
+                ArrayList<TreeNode> res = nodeToRootPath(child, target);
+            }
+        }
+        return ans;
+    }
     public static void main(String[] args) {
         //int[] dataArray = {10,20,50,-1,60,-1,-1,30,70,-1,-1,40,80,-1,90,110,-1,120,-1,-1,100,-1,-1,-1};
         int[] dataArray = {10,20,50,-1,60,-1,-1,30,70,-1,-1,40,80,-1,90,110,-1,120,-1,-1,100,-1,-1,-1};
@@ -159,6 +229,7 @@ public class Main {
        // System.out.println(getMaximum(root));
         //levelOrderTraversal(root);
        // levelOrderwise(root);
-        levelOrder3(root);
+        levelOrderLinewise3(root);
+        System.out.println(nodeToRootPath(root, 80));
     }
 }
