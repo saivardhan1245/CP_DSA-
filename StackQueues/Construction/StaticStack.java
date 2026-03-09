@@ -1,4 +1,3 @@
-package StackQueues.Construction;
 
 class Stack{
     final int maxsize = 8;

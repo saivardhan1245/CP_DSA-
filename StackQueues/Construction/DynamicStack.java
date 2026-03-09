@@ -1,4 +1,5 @@
-package StackQueues;
+
+
 
 class Stack{
     final int maxsize = 8;

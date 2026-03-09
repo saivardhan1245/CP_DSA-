@@ -1,4 +1,4 @@
-package StackQueues.Construction;
+
 
 class MyQueue {
     private int[] data;
