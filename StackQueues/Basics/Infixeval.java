@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Stack;
 public class Infixeval{
     public static  int precedence(char op){
         if(op=='^'){

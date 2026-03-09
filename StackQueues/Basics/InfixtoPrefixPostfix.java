@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Stack;
 public class InfixtoPrefixPostfix {
     public static int preceedence(char op){
         if(op=='^'){

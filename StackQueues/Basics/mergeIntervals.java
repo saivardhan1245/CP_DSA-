@@ -2,7 +2,8 @@
 // si------------ ei
 // ----ci---------------------ef   ei >= ci => ci =si ef remains same
 //-----ci---ef          ef = ei  
-import java.util.*;
+import java.util.Arrays;
+import java.util.Stack;
  class Pair{
     int si;
     int ei;
