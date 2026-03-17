@@ -23,3 +23,8 @@ public class CrawerLog {
     }
 }
 }
+/*
+Edge cases:
+Input
+logs =  ["./","../","./"]
+ */
