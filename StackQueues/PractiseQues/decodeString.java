@@ -24,9 +24,11 @@ public class decodeString {
                 int d = digit.pop();
                 String prev = st.pop();
                 StringBuilder temp = new StringBuilder(prev);
-                while(d-->0){
-                    temp.append(curr.toString());
-                }
+                // while(d-->0){
+                //     temp.append(curr.toString());
+                // }
+                 String str = curr.toString();
+               temp.append(str.repeat(d));
                 curr = temp;
             }else{
                 curr.append(ch);
