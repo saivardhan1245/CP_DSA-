@@ -34,5 +34,28 @@ public class makeStringGreat {
         return res;
         
     }
+    public String makeGood2(String s) {
+        Deque<Character> st = new ArrayDeque<>();
+        StringBuilder str = new StringBuilder();
+        int n = s.length();
+        for(int i = n - 1 ; i >= 0 ; i-- ){
+            char ch = s.charAt(i);
+            
+            if(!st.isEmpty() && Character.toLowerCase(ch)== Character.toLowerCase(st.peek()) && ch!=st.peek()){
+                st.pop();
+            }else{
+                st.push(ch);
+            }
+           
+
+        }
+        while(!st.isEmpty()){
+            str.append(st.pop());
+        }
+        String res = str.toString();
+        return res;
+        
+    }
+
 }
 }
