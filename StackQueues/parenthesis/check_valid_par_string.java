@@ -1,6 +1,7 @@
 // leetcode 678
 //https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid/description/
 import java.util.Stack;
+public class check_valid_par_string {
     public boolean checkValidString(String s) {
         int max = 0 , min = 0 ;
         for(char ch:s.toCharArray()){
@@ -62,3 +63,6 @@ import java.util.Stack;
 
         return open.isEmpty();
     }
+     
+}
+    
