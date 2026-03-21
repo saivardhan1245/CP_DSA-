@@ -1,4 +1,8 @@
 //https://leetcode.com/problems/simplify-path/description/
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 class simplifyPath {
     public String simplifyPath(String path) {
         Deque<String> st = new ArrayDeque<>();

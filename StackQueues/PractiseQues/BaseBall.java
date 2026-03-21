@@ -1,4 +1,3 @@
-package StackQueues.PractiseQues;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
