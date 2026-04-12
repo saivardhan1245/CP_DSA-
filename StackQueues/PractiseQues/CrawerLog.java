@@ -1,4 +1,4 @@
-package StackQueues.PractiseQues;
+
 import java.util.ArrayDeque;
 import java.util.Deque;
 //https://leetcode.com/problems/crawler-log-folder/description/
