@@ -1,6 +1,404 @@
-import java.util.*;
-public class Collections{
-    public static void main(String[] args){
-        
+// ================= ARRAYS =================
+
+Arrays.sort(arr);
+Arrays.fill(arr,-1);
+Arrays.toString(arr);
+// custom sort
+
+Arrays.sort(arr,(a,b)->a[0]-b[0]);
+
+Arrays.sort(arr,(a,b)->{
+    if(a[0]==b[0]){
+        return a[1]-b[1];
     }
+    return a[0]-b[0];
+});
+
+Arrays.sort(arr,(a,b)->{
+    if(a[0]==b[0]){
+        return b[1]-a[1];
+    }
+    return a[0]-b[0];
+});
+
+// safer comparator
+
+Integer.compare(a,b);
+
+Integer.compare(b,a);
+
+
+// ================= ARRAYLIST =================
+
+ArrayList<Integer> list = new ArrayList<>();
+
+list.add(x);
+
+list.add(idx,val);
+
+list.get(idx);
+
+list.set(idx,val);
+
+list.remove(list.size()-1);
+
+list.remove(Integer.valueOf(x));
+
+list.size();
+
+list.contains(x);
+
+Collections.sort(list);
+
+Collections.sort(list,Collections.reverseOrder());
+
+Collections.reverse(list);
+
+Collections.max(list);
+
+Collections.min(list);
+
+Collections.frequency(list,x);
+
+list.subList(l,r);
+
+
+
+// ================= STRING =================
+
+String s = "abc";
+
+s.length();
+
+s.charAt(i);
+
+s.substring(l,r);
+
+s.contains("ab");
+
+s.indexOf("a");
+
+s.startsWith("a");
+
+s.endsWith("c");
+
+s.replace("a","x");
+
+s.toLowerCase();
+
+s.toUpperCase();
+
+s.trim();
+
+s.split(" ");
+
+s.toCharArray();
+
+String.join(" ",arr);
+
+"a".repeat(5);
+
+
+// ================= STRINGBUILDER =================
+
+StringBuilder sb = new StringBuilder();
+
+sb.append(x);
+
+sb.deleteCharAt(sb.length()-1);
+
+sb.reverse();
+
+sb.toString();
+
+sb.setCharAt(i,'a');
+
+
+// ================= HASHMAP =================
+
+HashMap<Integer,Integer> map = new HashMap<>();
+
+map.put(k,v);
+
+map.putIfAbsent(k,v);
+
+map.get(k);
+
+map.getOrDefault(k,0);
+
+map.containsKey(k);
+
+map.remove(k);
+
+map.size();
+
+map.clear();
+
+for(Map.Entry<Integer,Integer> e : map.entrySet()){
+
+    int key = e.getKey();
+
+    int val = e.getValue();
 }
+
+
+// frequency
+
+map.put(x,map.getOrDefault(x,0)+1);
+
+// merge
+
+map.merge(x,1,Integer::sum);
+
+// list inside map
+
+map.computeIfAbsent(x,k->new ArrayList<>()).add(y);
+
+
+
+// ================= HASHSET =================
+
+HashSet<Integer> set = new HashSet<>();
+
+set.add(x);
+
+set.remove(x);
+
+set.contains(x);
+
+set.size();
+
+
+
+// ================= TREESET =================
+
+TreeSet<Integer> set = new TreeSet<>();
+
+set.add(x);
+
+set.remove(x);
+
+set.first();
+
+set.last();
+
+set.ceiling(x);
+
+set.floor(x);
+
+set.higher(x);
+
+set.lower(x);
+
+
+
+// ================= TREEMAP =================
+
+TreeMap<Integer,Integer> map = new TreeMap<>();
+
+map.put(k,v);
+
+map.firstKey();
+
+map.lastKey();
+
+map.ceilingKey(x);
+
+map.floorKey(x);
+
+map.higherKey(x);
+
+map.lowerKey(x);
+
+map.pollFirstEntry();
+
+map.pollLastEntry();
+
+
+
+// ================= STACK / DEQUE =================
+
+Deque<Integer> st = new ArrayDeque<>();
+
+st.push(x);
+
+st.pop();
+
+st.peek();
+
+st.isEmpty();
+
+
+// deque
+
+Deque<Integer> dq = new ArrayDeque<>();
+
+dq.offerFirst(x);
+
+dq.offerLast(x);
+
+dq.pollFirst();
+
+dq.pollLast();
+
+dq.peekFirst();
+
+dq.peekLast();
+
+
+
+// ================= QUEUE =================
+
+Queue<Integer> q = new LinkedList<>();
+
+q.offer(x);
+
+q.poll();
+
+q.peek();
+
+q.isEmpty();
+
+
+
+// ================= PRIORITY QUEUE =================
+
+// min heap
+
+PriorityQueue<Integer> pq =
+    new PriorityQueue<>();
+
+pq.offer(x);
+
+pq.poll();
+
+pq.peek();
+
+
+// max heap
+
+PriorityQueue<Integer> pq2 =
+    new PriorityQueue<>(Collections.reverseOrder());
+
+
+
+// ================= CHARACTER =================
+
+Character.isDigit(ch);
+
+Character.isLetter(ch);
+
+Character.isLowerCase(ch);
+
+Character.isUpperCase(ch);
+
+Character.toLowerCase(ch);
+
+Character.toUpperCase(ch);
+
+
+// conversions
+
+(int)'a';
+
+(char)97;
+
+ch-'a';
+
+(char)(x+'a');
+
+
+
+// ================= MATH =================
+
+Math.max(a,b);
+
+Math.min(a,b);
+
+Math.abs(x);
+
+Math.sqrt(x);
+
+Math.pow(a,b);
+
+Math.ceil(x);
+
+Math.floor(x);
+
+Math.round(x);
+
+
+
+// ================= BINARY SEARCH =================
+
+Arrays.binarySearch(arr,x);
+
+Collections.binarySearch(list,x);
+
+
+// lower bound style
+
+int idx = Collections.binarySearch(list,x);
+
+if(idx < 0){
+    idx = -idx - 1;
+}
+
+
+
+// ================= LIST CREATION =================
+
+List<Integer> list =
+    new ArrayList<>(Collections.nCopies(n,0));
+
+
+
+// ================= CONVERSIONS =================
+
+// array -> list
+
+Arrays.asList(arr);
+
+// list -> array
+
+list.toArray(new Integer[0]);
+
+
+
+// ================= 2D FILL =================
+
+for(int[] row : mat){
+    Arrays.fill(row,-1);
+}
+
+// ================= putIfAbsent =================
+
+HashMap<Integer,Integer> map = new HashMap<>();
+
+map.putIfAbsent(1,10);
+
+// only inserts if key NOT present
+
+
+// ================= common usage =================
+
+map.putIfAbsent(x,0);
+
+map.put(x,map.get(x)+1);
+
+
+// ================= list inside hashmap =================
+
+HashMap<Integer,ArrayList<Integer>> map =
+    new HashMap<>();
+
+map.putIfAbsent(x,new ArrayList<>());
+
+map.get(x).add(y);
+
+
+// better version
+
+map.computeIfAbsent(x,k->new ArrayList<>()).add(y);
+
+
