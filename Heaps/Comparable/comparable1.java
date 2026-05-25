@@ -1,5 +1,6 @@
+import java.util.PriorityQueue;
 import java.util.*;
-class Student implements Comparable{
+class Student implements Comparable<Student>{
     int roll;
     int marks;
     String name;
@@ -9,8 +10,8 @@ class Student implements Comparable{
         this.name = name;
     }
     @Override
-    public int compareTo(Object other){
-        Student ot = (Student) other;
+    public int compareTo(Student ot){
+        
         // min heap this -  other 
         //max heap other - this
         return this.marks - ot.marks;
