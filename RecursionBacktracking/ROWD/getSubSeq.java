@@ -26,6 +26,6 @@ public class getSubSeq {
     public static void main(String[] args) {
         
         System.out.println(getSubSeq("abc"));
-        
+        // output [, c, b, bc, a, ac, ab, abc]
     }
 }

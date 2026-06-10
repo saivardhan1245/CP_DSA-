@@ -25,6 +25,7 @@ public class getallPathsClimbStairs{
         }
         return res;
     }
+    
     public static void main(String[] args){
             System.out.println(getPaths(3));
             //[111, 12, 21, 3]
