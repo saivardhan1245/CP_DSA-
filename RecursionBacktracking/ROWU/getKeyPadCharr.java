@@ -5,8 +5,7 @@ import java.util.List;
 
 //https://leetcode.com/problems/letter-combinations-of-a-phone-number/
 public class getKeyPadCharr {
-    @SuppressWarnings("unused")
-class Solution {
+    class Solution {
     static String[] letters = {"","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"}; 
     public List<String> letterCombinations(String str) {
     // base case;
