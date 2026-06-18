@@ -1,3 +1,4 @@
+package RecursionBacktracking.RecursionProblems;
 
 public class printEncodings {
 
@@ -33,8 +34,5 @@ public class printEncodings {
     public static void main(String[] args) {
         String curr = "123";
         printEncoding(curr, "");
-        /**
-         * abc aw lc
-         */
     }
 }
