@@ -24,7 +24,7 @@ public class Main{
         for(Integer ele:arr){
             if(ele == null){
                 if(st.isEmpty())
-                    break;
+                    return root;
                 else{
                     if(st.peek().child == 0){
                         st.peek().child++;
@@ -54,6 +54,7 @@ public class Main{
         }
         return root;
     }
+    
     public static void display(TreeNode root){
         if(root == null){
             return;
